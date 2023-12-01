@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import { readFileSync } from 'fs';
 
 type NumberMap = {
   str: string;
@@ -37,7 +37,7 @@ const transformWordToNumber = (word: string): string => {
 };
 
 // read and split
-const words = fs.readFileSync('./data/day1.txt', 'utf-8');
+const words = readFileSync('./data/day1.txt', 'utf-8');
 const strArr = words.split('\n');
 
 // get total
